@@ -30,31 +30,36 @@
         
 
 #************ برنامج المهام اليومية *****************    
-    
+
+# ادخل المهام اليومية مع مراعاة فاصلة بين المهام
 name=input("Plesae type the of the countries sepparated by a comman: ").split(", ")
 
 #قامتين تخزن فيها المهام المنجزه والمهام التي لسئ لم تنجز
-opp=[]
-oop=[]
-
+completed=[]
+postpone=[]
+# التحقق
 for clo in name:
     print("\n"+clo+"\n")
+    # هل المهمة التالية منجزه اكتب نعم او لا
     num=input(f"Have you ever visited {clo} before? (yes/no)\n").lower()
     if num=='yes':
         print("I hope you had a wonderful time")
-        opp.append(clo)
+      #  يتم اضافة الى قائمة المهام المنجزه
+        completed.append(clo)
     else:
         print("I hope you get to visit it soon  ")
-        oop.append(clo)
+      #  يتم اضافتها الى قائمة المهام الموجلة
+        postpone.append(clo)
     print("-------------")    
     
     # قائمة التقرير للمهام
+# هل تريد راؤية ملخص مهامك اليومية اكتب نعم او لا
 ntigh=input("Do you want to see your today's progress? (yes/no)\n").lower()
 if ntigh=='yes':
     print("\n       ***** Done Tasks *****\n")
-    print(opp)
+    print(completed)
     print("\n       ****** Ongoing Tasks *****\n") 
-    print(oop)    
+    print(postpone)    
 
 else:
-    print("oo")
+    print("Farewell")
