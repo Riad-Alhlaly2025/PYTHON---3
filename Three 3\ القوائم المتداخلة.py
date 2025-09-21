@@ -15,17 +15,20 @@ nam=[1, 2, 3]
 name=["Apples" , "Bananas"]
 nump=["Milk" , "Water"]
 num=input("Press enter to change the content .....")
+# التحقق هل المستخدم ادخل نص او لا
 if num:
     print("No , Sorry")
 else:
     print("Here is the updated basket")
     
-    
+    # insert \ الدخول للموضوع المحدد والتغيير
     name.insert(0,"Oranges")
     name.insert(3,"Kiwis")
     nump.insert(0,"Coffee")
     nump.append("Tea")
+    # remove \ حذف من القائمة
     nump.remove('Water')
+    # append \ اضافة الى القائمة
     name.append(nump)
     name.append(nam)
     print(name)
